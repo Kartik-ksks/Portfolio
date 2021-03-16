@@ -8,25 +8,25 @@ export default function SideBar() {
   return (
     <>
       <motion.div id="sidenav">
-          <div id="icon-container" style={{display:'inline-block', justifycontent:'center', width:'800px', float:"center", left:'-230px'}}>
+          <div id="icon-container" style={{display:'inline-block', float: 'left', position: 'relative', left: '50%'}}>
             <span>
                 <a href="https://www.linkedin.com/in/kartik-seth-0a8696137/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} style={{ padding: '35px', margin:'15px', color: 'var(--secondary)', fontSize: '2rem' }} />
+                <FontAwesomeIcon icon={faLinkedin} style={{ padding: '5px', margin:'5px', color: 'var(--secondary)', fontSize: '0.5rem' }} />
                 </a>
             </span>
             <span>
                 <a href="kartikseth28@gmail.com" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faEnvelope} style={{ padding: '35px', margin:'15px',color: 'var(--secondary)', fontSize: '2rem' }} />
+                <FontAwesomeIcon icon={faEnvelope} style={{ padding: '5px', margin:'5px',color: 'var(--secondary)', fontSize: '0.5rem' }} />
                 </a>
             </span>
             <span>
                 <a href="https://github.com/Kartik-ksks" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} style={{ padding: '35px',margin:'15px', color: 'var(--secondary)', fontSize: '2rem' }} />
+                <FontAwesomeIcon icon={faGithub} style={{ padding: '5px',margin:'5px', color: 'var(--secondary)', fontSize: '0.5rem' }} />
                 </a>
             </span>
             <span>
                 <a href="https://www.facebook.com/kartik.seth.54/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faFacebook} style={{ padding: '35px',margin:'15px', color: 'var(--secondary)', fontSize: '2rem' }} />
+                <FontAwesomeIcon icon={faFacebook} style={{ padding: '5px',margin:'5px', color: 'var(--secondary)', fontSize: '0.5rem' }} />
                 </a>
             </span>
           </div>
