@@ -1,5 +1,5 @@
 import { projects } from '../Data/projects.jsx';
-import CardComponent from '../components/Cardcomponent.tsx';
+import CardComponent from '../components/Cardcomponent.jsx';
 import { motion } from 'framer-motion';
 import styles from '../styles/Cardcomponent.module.css';
 
