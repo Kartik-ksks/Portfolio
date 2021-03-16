@@ -8,7 +8,7 @@ export default function SideBar() {
   return (
     <>
       <motion.div id="sidenav">
-          <div id="icon-container" style={{display:'inline-block', justifycontent:'center', align:'center', width:'800px', textalign:'center', float:"center", alignitems:'center', left:'-230px'}}>
+          <div id="icon-container" style={{display:'inline-block', justifycontent:'center', width:'800px', float:"center", left:'-230px'}}>
             <span>
                 <a href="https://www.linkedin.com/in/kartik-seth-0a8696137/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} style={{ padding: '35px', margin:'15px', color: 'var(--secondary)', fontSize: '2rem' }} />
