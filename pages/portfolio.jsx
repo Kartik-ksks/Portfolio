@@ -1,9 +1,9 @@
-import Navbar from '../components/Navbar.tsx';
+import Navbar from '../components/Navbar.jsx';
 import Head from 'next/head';
-import Experience from '../components/Experience.tsx';
+import Experience from '../components/Experience.jsx';
 import { motion } from 'framer-motion';
-import Portfolio from '../components/Portfolio.tsx';
-import SideBar from '../components/Sidenav.tsx';
+import Portfolio from '../components/Portfolio.jsx';
+import SideBar from '../components/Sidenav.jsx';
 
 function portfolio() {
   const attributes = {

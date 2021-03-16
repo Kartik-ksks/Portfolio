@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import TextAnimation from 'react-animate-text';
-import Navbar from '../components/Navbar.tsx';
-import SideBar from '../components/Sidenav.tsx';
+import Navbar from '../components/Navbar.jsx';
+import SideBar from '../components/Sidenav.jsx';
 import { library} from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faTruck, faFile, faCrown } from '@fortawesome/free-solid-svg-icons';
