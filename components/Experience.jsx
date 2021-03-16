@@ -7,7 +7,7 @@ export default function Experience() {
       <Container>
         <span style={{ color: 'var(--secondary)', marginTop: '1.1em', marginBottom: '20px' }}>
           <div >
-            <span style={{ color: 'var(--fontColor)', fontSize: '2rem' }}>Procedure Tech</span>
+            <h2 style={{ color: 'var(--fontColor)', fontSize: '2rem' }}>Procedure Tech</h2>
             <span style={{ float: 'right', color: 'var(--subsecondary)', fontSize: '0.9rem' }}>(March 2021 - Present)</span>
           </div>
           <div style={{ color: 'var(--fontColor)', fontSize: '1.6rem' }}> Frontend Developer</div>
@@ -21,7 +21,7 @@ export default function Experience() {
         </span>
         <span style={{ color: 'var(--secondary)', marginTop: '1.1em' }}>
           <div>
-            <span style={{ color: 'var(--fontColor)', fontSize: '2rem' }}>Formula Manipal Electric</span>
+            <h2 style={{ color: 'var(--fontColor)', fontSize: '2rem' }}>Formula Manipal Electric</h2>
             <span style={{ float: 'right', color: 'var(--subsecondary)', fontSize: '0.9rem' }}>
               (December 2018 – April 2020)
             </span>

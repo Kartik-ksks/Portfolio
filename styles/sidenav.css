@@ -1,10 +1,11 @@
 #sidenav{
-    position: fixed;
+    position:static;
     top: 0;
     width: 3.5em;
-    height: 100vh;
+  /*  height: 40vh; */
     text-align: left;
     background-color: none;
+    float:left;
 }
 
 @media and (max-width: 620px) {
@@ -17,5 +18,5 @@
 }
 
 #icon-container{
-    margin-top: 65vh;
+    margin-top: 5vh;
 }

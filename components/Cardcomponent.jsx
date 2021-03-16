@@ -20,7 +20,7 @@ export default function CardComponent(props) {
   const { project } = props;
   const { tags, codeLink  } = project;
   return (
-    <Col sm="12" md="6" lg="6" style={{ display: 'inline-block' }}>
+    <Col sm="12" md="6" lg="6" style={{ display: 'block'}}>
       <motion.span variants={childVariants}>
         <div  className={styles.main} >
           <Card style={{padding:'3em'}}>
