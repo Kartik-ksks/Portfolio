@@ -20,10 +20,10 @@ export default function Home() {
       </Head>
         <Navbar/>
       <main className={styles.main}>
-        <span style={{color: "gray", fontSize:'3rem'}}>  Hi, my name is </span>
+        <span style={{color: "gray", fontSize:'2rem'}}>  Hi, my name is </span>
         <TextAnimation charInterval={100}>
-      <span className={styles.title} style={{fontfamily:"Fantasy", fontsize:"5rem"}}>Kartik Seth.</span>
-        <span style={{color: "#764e56", fontSize:'4rem'}}>I am a frontend developer.</span>
+      <span className={styles.title} style={{fontfamily:"Fantasy", fontsize:"4rem"}}>Kartik Seth.</span>
+        <span style={{color: "#764e56", fontSize:'3rem'}}>I am a frontend developer.</span>
         </TextAnimation>
       </main>
       <SideBar/>
