@@ -1,0 +1,21 @@
+#sidenav{
+    position: fixed;
+    top: 0;
+    width: 3.5em;
+    height: 100vh;
+    text-align: center;
+    background-color: none;
+}
+
+@media (max-width: 1050px) {
+    #sidenav {
+        display : none;
+    }
+    #icon-container {
+        display: none;
+    }
+}
+
+#icon-container{
+    margin-top: 65vh;
+}

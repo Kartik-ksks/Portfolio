@@ -1,0 +1,19 @@
+.container{
+  marginTop: '3em';
+  padding: '5 rem';
+}
+
+
+.main{
+  height: 100%;
+  padding-bottom: 13%;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 30px;
+  border: 2px solid var(--border);
+}
+
+.title{
+  display: flex;
+  align-items: center;
+}
