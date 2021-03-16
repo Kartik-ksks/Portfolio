@@ -25,9 +25,6 @@ export default function CardComponent(props) {
         <div  className={styles.main} >
           <Card style={{padding:'3em'}}>
             <div>
-              <span style={{ fontSize: '3em', paddingTop: '10px', color: project.color }}>
-                <FontAwesomeIcon icon={project.image} style={{ padding: '10px', color: '{project.color}' }} />
-              </span>
             </div>
             <span style={{ color: 'var(--fontColor)', marginLeft: '10px', fontSize:'2rem' }}>{project.name}</span>
             <div style={{ fontSize: '1rem', margin: '12px', color: 'var(--secondary)' }}>{project.description}</div>

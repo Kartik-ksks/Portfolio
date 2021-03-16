@@ -3,16 +3,16 @@
     top: 0;
     width: 3.5em;
     height: 100vh;
-    text-align: center;
+    text-align: left;
     background-color: none;
 }
 
-@media (max-width: 1050px) {
+@media and (max-width: 620px) {
     #sidenav {
-        display : none;
-    }
+      width: auto !important;
+}
     #icon-container {
-        display: none;
+      width: auto !important;
     }
 }
 

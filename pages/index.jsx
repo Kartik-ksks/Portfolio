@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import TextAnimation from 'react-animate-text';
 import Navbar from '../components/Navbar.jsx';
 import SideBar from '../components/Sidenav.jsx';
+import Footer from '../components/Footer.jsx';
 import { library} from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin, faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faTruck, faFile, faCrown } from '@fortawesome/free-solid-svg-icons';
@@ -25,8 +26,8 @@ export default function Home() {
         <span style={{color: "#764e56", fontSize:'4rem'}}>I am a frontend developer.</span>
         </TextAnimation>
       </main>
-      <footer className={styles.footer}> made by Kartik Seth. </footer>
       <SideBar/>
+      <Footer />
     </div>
   )
 }

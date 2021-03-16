@@ -8,7 +8,7 @@ export default function SideBar() {
   return (
     <>
       <motion.div id="sidenav">
-          <div id="icon-container" style={{display:'inline-block', float: 'left', position: 'relative', left: '50%'}}>
+          <div id="icon-container" >
             <span>
                 <a href="https://www.linkedin.com/in/kartik-seth-0a8696137/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} style={{ padding: '5px', margin:'5px', color: 'var(--secondary)', fontSize: '0.5rem' }} />
