@@ -6,7 +6,7 @@ export default function Experience() {
     <>
       <Container>
         <span style={{ color: 'var(--secondary)', marginTop: '1.1em', marginBottom: '20px' }}>
-          <div style={{ bordertop: '1px solid #eaeaea'}}>
+          <div >
             <span style={{ color: 'var(--fontColor)', fontSize: '2rem' }}>Procedure Tech</span>
             <span style={{ float: 'right', color: 'var(--subsecondary)', fontSize: '0.9rem' }}>(March 2021 - Present)</span>
           </div>
