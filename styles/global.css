@@ -6,6 +6,22 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  transition: background-color 0.3s ease;
+}
+
+.light {
+  /* Styles specific to the light theme */
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  /* Styles specific to the dark theme */
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
 a {
   color: inherit;
   text-decoration: none;

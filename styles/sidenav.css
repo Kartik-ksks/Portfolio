@@ -1,22 +1,22 @@
-#sidenav{
-    position:static;
-    top: 0;
-    width: 3.5em;
+#sidenav {
+  position: static;
+  top: 0;
+  width: 3.5em;
   /*  height: 40vh; */
-    text-align: left;
-    background-color: none;
-    float:left;
+  text-align: left;
+  background-color: none;
+  float: left;
 }
 
-@media and (max-width: 620px) {
-    #sidenav {
-      width: auto !important;
-}
-    #icon-container {
-      width: auto !important;
-    }
+@media only screen and (max-width: 620px) {
+  body #sidenav {
+    width: auto;
+  }
+  body #icon-container {
+    width: auto;
+  }
 }
 
-#icon-container{
-    margin-top: 5vh;
+#icon-container {
+  margin-top: 5vh;
 }
