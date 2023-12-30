@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import TextAnimation from "react-animate-text";
+import { TypeAnimation } from "react-type-animation";
 import Navbar from "../components/Navbar.jsx";
 import SideBar from "../components/Sidenav.jsx";
 import Footer from "../components/Footer.jsx";
@@ -31,16 +31,15 @@ export default function Home() {
   const { theme } = useTheme();
   const style = {
     container: {
-      minHeight: '100vh',
-      padding: '0 0.5rem',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }
+      minHeight: "100vh",
+      padding: "0 0.5rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   };
 
-  console.log(theme);
   return (
     <div className={`themed-container ${theme}`} style={style.container}>
       <Head>
@@ -49,21 +48,20 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <span style={{ color: "gray", fontSize: "2rem" }}>
-          {" "}
-          Hi, my name is{" "}
-        </span>
-        <TextAnimation charInterval={100}>
-          <span
-            className={styles.title}
-            style={{ fontfamily: "Fantasy", fontsize: "4rem" }}
-          >
-            Kartik Seth.
-          </span>
-          <span style={{ color: "#764e56", fontSize: "3rem" }}>
-            I am a frontend developer.
-          </span>
-        </TextAnimation>
+        <TypeAnimation
+          sequence={[
+            {
+              text: "Hi, my name is \nKartik Seth.",
+              style: { fontFamily: "Fantasy", fontSize: "4rem" },
+            },
+            {
+              text: "I'm a Developer",
+              style: { color: "#764e56", fontSize: "3rem" },
+            },
+          ]}
+          speed={50}
+          repeat={Infinity}
+        />
       </main>
       <SideBar />
       <Footer />

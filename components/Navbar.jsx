@@ -1,8 +1,7 @@
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCrown } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar({ router }) {
   const navs = [
@@ -12,26 +11,20 @@ function Navbar({ router }) {
   ];
 
   return (
-    <nav className="navbar" >
+    <nav className="navbar">
       <div className="container">
-        <Link href="/">
-          <a className="logo">
-            <FontAwesomeIcon icon={faCrown} style={{ fontSize: "3rem" }} />
-          </a>
-        </Link>
-
         <ul className="nav-links" style={{ fontSize: "1rem" }}>
           {navs.map((nav) => (
             <li>
-              <Link href={nav.href}>
-                <a
+              <Link href={nav.href} passHref>
+                <div
                   className={`nav-item ${
                     router.pathname == nav.href ? "active" : ""
                   }`}
                 >
                   {nav.text}
-                </a>
-              </Link>
+                </div>
+                </Link>
             </li>
           ))}
         </ul>
