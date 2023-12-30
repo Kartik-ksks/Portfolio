@@ -3,7 +3,7 @@ import Head from "next/head";
 import Experience from "../components/Experience.jsx";
 import { motion } from "framer-motion";
 import Portfolio from "../components/Portfolio.jsx";
-import SideBar from "../components/Sidenav.jsx";
+import SideBar from "../components/SideBar.jsx";
 import Footer from "../components/Footer.jsx";
 import { useTheme } from "next-themes";
 
@@ -21,13 +21,13 @@ function portfolio() {
   };
   const style = {
     container: {
-      minHeight: '100vh',
-      padding: '0 0.5rem',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }
+      minHeight: "100vh",
+      padding: "0 0.5rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   };
   const { theme } = useTheme();
   return (
@@ -36,8 +36,8 @@ function portfolio() {
         <title>Portfolio</title>
       </Head>
       <Navbar />
-      <Portfolio />
       <SideBar />
+      <Portfolio />
       <motion.div
         className="container"
         variants={attributes}
@@ -45,16 +45,6 @@ function portfolio() {
         initial="hidden"
         animate="visible"
       >
-        <h1
-          style={{
-            color: "var(--secondary)",
-            fontSize: "3rem",
-            marginBottom: "30px",
-            margintop: "5px",
-          }}
-        >
-          Experience
-        </h1>
         <Experience />
       </motion.div>
       <Footer />

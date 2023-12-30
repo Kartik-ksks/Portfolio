@@ -1,74 +1,52 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { experiences } from "../Data/experience.jsx";
 
+
+const ExperienceEntry = ({ title, position, date, description }) => (
+  <span style={{ color: "var(--secondary)", marginTop: "1.1em" }}>
+    <div>
+      <h2 style={{ color: "var(--fontColor)", fontSize: "2rem" }}>{title}</h2>
+      <span
+        style={{
+          float: "right",
+          color: "var(--subsecondary)",
+          fontSize: "0.9rem",
+        }}
+      >
+        {date}
+      </span>
+    </div>
+    <div style={{ color: "var(--fontColor)", fontSize: "1.6rem" }}>
+      {position}
+    </div>
+    <div style={{ marginTop: "1.5em", fontSize: "1.2rem" }}>
+      <ul>
+        {description.map((point, index) => (
+          <li key={index}>{point}</li>
+        ))}
+      </ul>
+    </div>
+  </span>
+);
 export default function Experience() {
   return (
-    <>
+    <div style={{marginLeft: "35px"}}>
+      <h1
+        style={{
+          color: "var(--secondary)",
+          fontSize: "3rem",
+          marginBottom: "30px",
+          marginTop: "5px",
+        }}
+      >
+        Experience
+      </h1>
       <Container>
-        <span
-          style={{
-            color: "var(--secondary)",
-            marginTop: "1.1em",
-            marginBottom: "20px",
-          }}
-        >
-          <div>
-            <h2 style={{ color: "var(--fontColor)", fontSize: "2rem" }}>
-              Procedure Tech
-            </h2>
-            <span
-              style={{
-                float: "right",
-                color: "var(--subsecondary)",
-                fontSize: "0.9rem",
-              }}
-            >
-              (March 2021 - Present)
-            </span>
-          </div>
-          <div style={{ color: "var(--fontColor)", fontSize: "1.6rem" }}>
-            {" "}
-            Frontend Developer
-          </div>
-          <div style={{ marginTop: "1.5em", fontSize: "1.2rem" }}>
-            <ul>
-              <li>Just starting out.</li>
-            </ul>
-          </div>
-        </span>
-        <span style={{ color: "var(--secondary)", marginTop: "1.1em" }}>
-          <div>
-            <h2 style={{ color: "var(--fontColor)", fontSize: "2rem" }}>
-              Formula Manipal Electric
-            </h2>
-            <span
-              style={{
-                float: "right",
-                color: "var(--subsecondary)",
-                fontSize: "0.9rem",
-              }}
-            >
-              (December 2018 – April 2020)
-            </span>
-          </div>
-          <div style={{ color: "var(--fontColor)", fontSize: "1.6rem" }}>
-            Controls Engineer
-          </div>
-          <div style={{ marginTop: "1.5em", fontSize: "1.2rem" }}>
-            <ul>
-              <li>
-                Worked in Formula Manipal Electric, which is a formula student
-                team; That designs and develops a formula style race car.
-              </li>
-              <li>
-                Developed a CAN bus system for communication between various
-                nodes of the electric car; such as the Rihnehart motor
-                controller, BMS and Central node used also for Data acquisition.
-              </li>
-            </ul>
-          </div>
-        </span>
+        {experiences.map((experience, index) => (
+          <ExperienceEntry key={index} {...experience} />
+        ))}
       </Container>
-    </>
+    </div>
   );
 }

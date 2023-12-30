@@ -1,6 +1,15 @@
 import React from "react";
-import styles from "../styles/Home.module.css";
 
 export default function footer() {
-  return <div className={styles.footer}>made with ❤️ by Kartik Seth.</div>;
+  const styles = {
+    footer: {
+      width: "100%",
+      height: "100px",
+      borderTop: "1px solid #eaeaea",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }
+  }
+  return <div style={styles.footer}>made with ❤️ by Kartik Seth.</div>;
 }
