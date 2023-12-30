@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Col, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,6 +29,7 @@ export default function CardComponent(props) {
       color: "var(--fontColor)",
       marginLeft: "10px",
       fontSize: "2rem",
+      margin: "2rem",
     },
     description: {
       fontSize: "1rem",
@@ -54,26 +55,24 @@ export default function CardComponent(props) {
   const { tags, codeLink } = project;
 
   return (
-    <Col sm="12" md="6" lg="6" style={{ display: "block" }}>
-      <motion.span variants={childVariants}>
-        <div style={styles.main}>
-          <Card style={{ padding: "3em" }}>
-            <div></div>
-            <span style={styles.heading}>{project.name}</span>
-            <div style={styles.description}>{project.description}</div>
-            <div style={styles.tags}>
-              {tags && tags.map((tag) => <span key={tag}>{`${tag}\t`}</span>)}
-            </div>
-            <div style={styles.link}>
-              {codeLink && (
-                <a href={codeLink} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faCode} style={styles.icon} />
-                </a>
-              )}
-            </div>
-          </Card>
-        </div>
-      </motion.span>
-    </Col>
+    <motion.span variants={childVariants}>
+      <div style={{ marginLeft: "35px", maxWidth: "100%" }}>
+        <Card style={styles.main}>
+          <div></div>
+          <span style={styles.heading}>{project.name}</span>
+          <div style={styles.description}>{project.description}</div>
+          <div style={styles.tags}>
+            {tags && tags.map((tag) => <span key={tag}>{`${tag}\t`}</span>)}
+          </div>
+          <div style={styles.link}>
+            {codeLink && (
+              <a href={codeLink} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faCode} style={styles.icon} />
+              </a>
+            )}
+          </div>
+        </Card>
+      </div>
+    </motion.span>
   );
 }

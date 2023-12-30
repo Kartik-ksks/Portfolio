@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { experiences } from "../Data/experience.jsx";
-
+import { motion } from "framer-motion";
 
 const ExperienceEntry = ({ title, position, date, description }) => (
   <span style={{ color: "var(--secondary)", marginTop: "1.1em" }}>
@@ -30,8 +30,19 @@ const ExperienceEntry = ({ title, position, date, description }) => (
   </span>
 );
 export default function Experience() {
+  const attributes = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 1,
+      },
+    },
+  };
   return (
-    <div style={{marginLeft: "35px"}}>
+    <motion.div style={{ marginLeft: "35px" }} variants={attributes}>
       <h1
         style={{
           color: "var(--secondary)",
@@ -47,6 +58,6 @@ export default function Experience() {
           <ExperienceEntry key={index} {...experience} />
         ))}
       </Container>
-    </div>
+    </motion.div>
   );
 }

@@ -10,7 +10,9 @@ export default function Home() {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setTheme("light");
+    theme !== "system"?
+    setTheme(theme):
+    setTheme("light")
   }, [setTheme]);
 
   return (

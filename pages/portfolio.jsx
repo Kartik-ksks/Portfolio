@@ -37,7 +37,6 @@ function portfolio() {
       </Head>
       <Navbar />
       <SideBar />
-      <Portfolio />
       <motion.div
         className="container"
         variants={attributes}
@@ -46,6 +45,7 @@ function portfolio() {
         animate="visible"
       >
         <Experience />
+        <Portfolio />
       </motion.div>
       <Footer />
     </div>

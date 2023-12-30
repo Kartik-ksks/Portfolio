@@ -1,0 +1,19 @@
+/* PoppingAnimation.module.css */
+
+.popping-animation {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.popping-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: pop-in 0.5s ease forwards;
+}
+
+@keyframes pop-in {
+  to {
+    opacity: 1;
+  }
+}

@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 export default function Portfolio() {
   const styles = {
     container: {
-      marginTop: "3em",
-      padding: "0 2rem", // Adjusted padding
-      marginLeft: "auto", // Align to the left
-      marginRight: "auto",
+      paddingLeft: "35px",
+      marginTop: "8em",
+      maxWidth: "1200px",
       maxWidth: "1200px", // Optional: set a max-width for the content
     },
   };
@@ -26,28 +25,26 @@ export default function Portfolio() {
   };
 
   return (
-    <>
-      <div style={styles.container}>
-        <motion.div
-          className="portfolio-wrapper"
-          variants={attributes}
-          initial="hidden"
-          animate="visible"
+    <div style={styles.container}>
+      <motion.div
+        className="portfolio-wrapper"
+        variants={attributes}
+        initial="hidden"
+        animate="visible"
+      >
+        <h1
+          style={{
+            color: "var(--secondary)",
+            fontSize: "3rem",
+            marginBottom: "30px",
+          }}
         >
-          <h1
-            style={{
-              color: "var(--secondary)",
-              fontSize: "3rem",
-              marginBottom: "30px",
-            }}
-          >
-            Projects
-          </h1>
-          {projects.map((project) => (
-            <CardComponent project={project} key={project.name} />
-          ))}
-        </motion.div>
-      </div>
-    </>
+          Projects
+        </h1>
+        {projects.map((project) => (
+          <CardComponent project={project} key={project.name} />
+        ))}
+      </motion.div>
+    </div>
   );
 }

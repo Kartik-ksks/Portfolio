@@ -1,10 +1,37 @@
 import React, { useState, useEffect } from "react";
+import styles from "../css/PoppingAnimation.module.css";
+
+const PoppingAnimation = ({ text, delay = 200 }) => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    const timeoutIds = [];
+
+    for (let i = 0; i < text.length; i++) {
+      const timeoutId = setTimeout(() => {
+        setDisplayedText((prevText) => prevText + text[i]);
+      }, i * delay);
+
+      timeoutIds.push(timeoutId);
+    }
+
+    return () => {
+      timeoutIds.forEach((id) => clearTimeout(id));
+    };
+  }, [text, delay]);
+
+  return (
+    <div className={styles["popping-animation"]}>
+      {displayedText.split("").map((letter, index) => (
+        <span key={index} className={styles["popping-letter"]}>
+          {letter}
+        </span>
+      ))}
+    </div>
+  );
+};
 
 function Intro() {
-  const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
-  const speed = 90; // Adjust the typing speed
-
   const styles = {
     containerStyle: {
       minHeight: "80vh",
@@ -14,32 +41,8 @@ function Intro() {
       justifyContent: "center",
       alignItems: "center",
       transition: "background 0.5s ease", // Add a transition effect
-    }
-  }
-
-  const roles = [
-    "Full Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    // Add more roles as needed
-  ];
-
-  useEffect(() => {
-    const typeText = () => {
-      const currentRole = roles[index % roles.length];
-
-      if (text.length < currentRole.length) {
-        setText(currentRole.substring(0, text.length + 1));
-      } else {
-        setText(" ");
-        setIndex(index + 1);
-      }
-    };
-
-    const typingInterval = setInterval(typeText, speed);
-
-    return () => clearInterval(typingInterval);
-  }, [text, index, roles, speed]);
+    },
+  };
 
   return (
     <div>
@@ -49,7 +52,6 @@ function Intro() {
           <span
             style={{
               fontWeight: "bold",
-              color: "black",
               fontSize: "8rem",
               fontFamily: "Fantasy",
             }}
@@ -59,7 +61,12 @@ function Intro() {
           .
         </div>
         <div>
-          <div style={{ fontSize: "3rem" }}>I am a {text}</div>
+          <div style={{ fontSize: "3rem" }}>
+            <span>
+              I am a{" "}
+              <PoppingAnimation text="full Stack Developer" delay={100} />
+            </span>
+          </div>
         </div>
       </main>
     </div>

@@ -34,7 +34,6 @@ function Navbar({ router }) {
       </div>
       <style jsx>{`
         .navbar {
-          color: black;
           padding: 1rem 0;
           font-size: 2rem;
         }
@@ -52,7 +51,6 @@ function Navbar({ router }) {
 
         .nav-item {
           margin-right: 20px;
-          color: #CCCCFF;
           text-decoration: none; /* Remove underline */
           transition: color 0.3s ease;
           cursor: pointer;
@@ -64,7 +62,6 @@ function Navbar({ router }) {
 
         .active {
           font-weight: bold;
-          color: #CCCCFF;
         }
       `}</style>
     </nav>

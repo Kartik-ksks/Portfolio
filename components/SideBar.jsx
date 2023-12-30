@@ -21,7 +21,7 @@ export default function SideBar() {
   };
 
   return (
-    <div className="sidenav">
+    <div>
       <div
         style={{
           display: "flex",
@@ -29,6 +29,7 @@ export default function SideBar() {
           position: "fixed",
           bottom: "20px", // Adjust the distance from the bottom
           left: "10px",
+          paddingBottom: "15%"
         }}
       >
         <span style={{ marginBottom: "10px" }}>
