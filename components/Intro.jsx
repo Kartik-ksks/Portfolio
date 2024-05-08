@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import styles from "../css/PoppingAnimation.module.css";
 
 const PoppingAnimation = ({ text, delay = 200 }) => {
@@ -42,34 +43,40 @@ function Intro() {
       alignItems: "center",
       transition: "background 0.5s ease", // Add a transition effect
     },
+    box: {
+      paddingLeft: "35px",
+      marginTop: "8em",
+      maxWidth: "1200px",
+      maxWidth: "1200px", // Optional: set a max-width for the content
+    },
   };
 
   return (
-    <div>
-      <main style={styles.containerStyle}>
-        <div style={{ fontSize: "2rem", color: "gray" }}>
-          Hi! My name is <br />
-          <span
-            style={{
-              fontWeight: "bold",
-              fontSize: "8rem",
-              fontFamily: "Fantasy",
-            }}
-          >
-            Kartik Seth
-          </span>
-          .
-        </div>
-        <div>
-          <div style={{ fontSize: "3rem" }}>
-            <span>
-              I am a{" "}
-              <PoppingAnimation text="full Stack Developer" delay={100} />
+      <div style={styles.box}>
+        <main style={styles.containerStyle}>
+          <div style={{ fontSize: "2rem", color: "gray" }}>
+            Hi! My name is <br />
+            <span
+              style={{
+                fontWeight: "bold",
+                fontSize: "8rem",
+                fontFamily: "Fantasy",
+              }}
+            >
+              Kartik Seth
             </span>
+            .
           </div>
-        </div>
-      </main>
-    </div>
+          <div>
+            <div style={{ fontSize: "3rem" }}>
+              <span>
+                I am a{" "}
+                <PoppingAnimation text="full Stack Developer" delay={100} />
+              </span>
+            </div>
+          </div>
+        </main>
+      </div>
   );
 }
 
