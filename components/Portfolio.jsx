@@ -41,9 +41,11 @@ export default function Portfolio() {
         >
           Projects
         </h1>
-        {projects.map((project) => (
-          <CardComponent project={project} key={project.name} />
-        ))}
+        <div>
+          {projects.map((project) => (
+            <CardComponent project={project} key={project.name} />
+          ))}
+        </div>
       </motion.div>
     </div>
   );

@@ -19,11 +19,12 @@ export default function CardComponent(props) {
   const styles = {
     main: {
       height: "100%",
-      paddingBottom: "13%",
+      padding: "5%",
       maxWidth: "100%",
       borderRadius: "5px",
-      marginTop: "30px",
+      margin: "30px",
       border: "2px solid var(--border)",
+      backgroundColor: "#A9A9A9",
     },
     heading: {
       color: "var(--fontColor)",
@@ -31,9 +32,14 @@ export default function CardComponent(props) {
       fontSize: "2rem",
       margin: "2rem",
     },
+    box: {
+      padding: "20px",
+      marginLeft: "20px",
+    },
     description: {
       fontSize: "1rem",
-      margin: "12px",
+      marginLeft: "15px",
+      paddingTop: "20px",
       color: "var(--secondary)",
     },
     tags: {
@@ -42,12 +48,13 @@ export default function CardComponent(props) {
       color: "var(--subsecondary)",
     },
     link: {
-      margin: "0 10px 10px 10px",
+      margin: "5px",
       float: "right",
+      top: "0",
     },
     icon: {
       fontSize: "1.8rem",
-      color: "var(--subsecondary)",
+      color: "blue",
     },
   };
 
@@ -57,19 +64,22 @@ export default function CardComponent(props) {
   return (
     <motion.span variants={childVariants}>
       <div style={{ marginLeft: "35px", maxWidth: "100%" }}>
-        <Card style={styles.main}>
-          <div></div>
-          <span style={styles.heading}>{project.name}</span>
-          <div style={styles.description}>{project.description}</div>
-          <div style={styles.tags}>
-            {tags && tags.map((tag) => <span key={tag}>{`${tag}\t`}</span>)}
-          </div>
-          <div style={styles.link}>
-            {codeLink && (
-              <a href={codeLink} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faCode} style={styles.icon} />
-              </a>
-            )}
+        <Card bg="primary" style={styles.main}>
+          <span style={styles.heading}>
+            <>{project.name}</>
+            <>
+              {codeLink && (
+                <a href={codeLink} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faCode} style={styles.icon} />
+                </a>
+              )}
+            </>
+          </span>
+          <div style={styles.box}>
+            <div style={styles.description}>{project.description}</div>
+            <div style={styles.tags}>
+              {tags && tags.map((tag) => <span key={tag}>{`${tag}\t`}</span>)}
+            </div>
           </div>
         </Card>
       </div>

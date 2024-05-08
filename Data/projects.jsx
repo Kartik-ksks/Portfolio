@@ -1,6 +1,6 @@
 export const projects = [
   {
-    name: "E-Commerece Website",
+    name: "E-Commerce Website",
     image: "faTruck",
     color: "#9C27B0",
     description: `Built an E-Commerce store using React and Mongo`,

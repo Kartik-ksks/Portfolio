@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function footer() {
+export default function Footer() {
   const styles = {
     footer: {
       width: "100%",
@@ -8,8 +8,10 @@ export default function footer() {
       borderTop: "1px solid #eaeaea",
       display: "flex",
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
+      bottom: "0",
     }
-  }
-  return <div style={styles.footer}>made with ❤️ by Kartik Seth.</div>;
+  };
+
+  return <div className="padding-top"style={styles.footer}>made with ❤️ by Kartik Seth.</div>;
 }

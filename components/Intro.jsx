@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "../css/PoppingAnimation.module.css";
 
-const PoppingAnimation = ({ text, delay = 200 }) => {
+const PoppingAnimation = ({ color, text, delay = 200 }) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const PoppingAnimation = ({ text, delay = 200 }) => {
   }, [text, delay]);
 
   return (
-    <div className={styles["popping-animation"]}>
+    <div style={{color: color}} className={styles["popping-animation"]}>
       {displayedText.split("").map((letter, index) => (
         <span key={index} className={styles["popping-letter"]}>
           {letter}
@@ -33,10 +33,24 @@ const PoppingAnimation = ({ text, delay = 200 }) => {
 };
 
 function Intro() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // Function to handle screen size changes
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 768); // Adjust the breakpoint as needed
+  };
+
+  useEffect(() => {
+    handleResize(); // Check screen size on initial render
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const styles = {
     containerStyle: {
-      minHeight: "80vh",
+      minHeight: "40vh",
       padding: "0 0.5rem",
+      paddingBottom: "40vh",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -44,7 +58,7 @@ function Intro() {
       transition: "background 0.5s ease", // Add a transition effect
     },
     box: {
-      paddingLeft: "35px",
+      paddingLeft: "50px",
       marginTop: "8em",
       maxWidth: "1200px",
       maxWidth: "1200px", // Optional: set a max-width for the content
@@ -52,31 +66,39 @@ function Intro() {
   };
 
   return (
-      <div style={styles.box}>
-        <main style={styles.containerStyle}>
-          <div style={{ fontSize: "2rem", color: "gray" }}>
-            Hi! My name is <br />
-            <span
-              style={{
-                fontWeight: "bold",
-                fontSize: "8rem",
-                fontFamily: "Fantasy",
-              }}
-            >
-              Kartik Seth
+    <div style={styles.box}>
+      <main style={styles.containerStyle}>
+        <div style={{ fontSize: "2rem", color: "gray" }}>
+          Hi! My name is <br />
+          <span
+            style={{
+              fontWeight: "bold",
+              fontSize: isSmallScreen ? "4rem" : "8rem",
+              fontFamily: "Fantasy",
+            }}
+          >
+            Kartik Seth
+          </span>
+          .
+        </div>
+        <div>
+          <div
+          style={{
+            fontSize: isSmallScreen ? "1rem" : "3rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "left",
+            alignItems: "left",
+          }}
+          >
+            <span>
+              I am a{" "}
+              <PoppingAnimation color="blue" text="full Stack Developer" delay={100} />
             </span>
-            .
           </div>
-          <div>
-            <div style={{ fontSize: "3rem" }}>
-              <span>
-                I am a{" "}
-                <PoppingAnimation text="full Stack Developer" delay={100} />
-              </span>
-            </div>
-          </div>
-        </main>
-      </div>
+        </div>
+      </main>
+    </div>
   );
 }
 
