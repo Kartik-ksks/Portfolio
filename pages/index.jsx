@@ -73,7 +73,7 @@ export default function Home() {
                 <div className="leaf leaf-3"></div>
               </div>
               <h2>Welcome to my world</h2>
-              <p>Loading nature-inspired portfolio...</p>
+              <p>Creating something beautiful and efficient through code.</p>
               <div className="loading-progress">
                 <div className="loading-progress-bar"></div>
               </div>
